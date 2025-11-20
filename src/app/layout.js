@@ -1,4 +1,5 @@
-import "./globals.css"; // <-- import Tailwind CSS here
+import "./globals.css";
+import { CartProvider } from "@/components/CartContext";
 
 export const metadata = {
   title: "MyShop",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <CartProvider>{children}</CartProvider>
+      </body>
     </html>
   );
 }

@@ -1,15 +1,16 @@
 "use client";
 
-import Navbar from "../../components/Navbar";
-import { useCart } from "../../components/CartContext";
+import Navbar from "@/components/Navbar";
+import { useCart } from "@/components/CartContext";
 
 export default function CartPage() {
   const { cart, removeFromCart, clearCart } = useCart();
 
+  console.log("CART DEBUG:", cart); // <-- VERY IMPORTANT Debug line
+
   return (
     <>
       <Navbar />
-
       <div className="max-w-4xl mx-auto p-6">
         <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
 

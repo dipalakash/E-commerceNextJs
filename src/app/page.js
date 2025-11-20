@@ -1,17 +1,21 @@
-import Navbar from "../components/Navbar";
-// import ProductCard from "../components/ProductCard";
-import ProductCard from "../components/productCard";
-import { CartProvider } from "../components/CartContext";
+"use client";
+
+import Navbar from "@/components/Navbar";
+import ProductCard from "@/components/productCard";
+import { CartProvider } from "@/components/CartContext";
 
 const products = [
   { id: 1, name: "Apple Phone", price: 79999, image: "/images/apple.png" },
   { id: 2, name: "Oppo A57", price: 19999, image: "/images/Oppo-A57-4G.png" },
   { id: 3, name: "Samsung Phone", price: 49999, image: "/images/samsung.webp" },
+  { id: 4, name: "Vivo V29", price: 29999, image: "/images/samsung.webp" },
+  { id: 5, name: "OnePlus 11", price: 59999, image: "/images/Oppo-A57-4G.png" },
+  { id: 6, name: "Realme 11 Pro", price: 24999, image: "/images/apple.png" },
 ];
 
 export default function Home() {
   return (
-    <CartProvider>
+    <>
       <Navbar />
 
       <main className="max-w-5xl mx-auto px-4 py-8">
@@ -22,8 +26,7 @@ export default function Home() {
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
-        <div className="bg-green-500 text-white p-8">Tailwind is working!</div>
       </main>
-    </CartProvider>
+    </>
   );
 }
