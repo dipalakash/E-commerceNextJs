@@ -1,5 +1,7 @@
+import Banner from "@/components/Banner";
 import "./globals.css";
 import { CartProvider } from "@/components/CartContext";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "MyShop",
@@ -11,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <CartProvider>{children}</CartProvider>
+        <Footer />
       </body>
     </html>
   );
