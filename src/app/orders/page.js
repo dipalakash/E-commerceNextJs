@@ -13,7 +13,7 @@ export default function OrdersPage() {
 
   return (
     <>
-      <Navbar />
+   
 
       <div className="max-w-4xl mx-auto mt-10 p-4">
         <h1 className="text-3xl font-bold mb-6">Your Orders</h1>

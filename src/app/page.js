@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/productCard";
 import Banner from "@/components/Banner";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
 
-  // fetch products from fake API
   useEffect(() => {
     async function loadProducts() {
       const res = await fetch("/api/products");
@@ -20,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      {/* Banner ONLY on Home */}
       <Banner />
 
       <main className="max-w-5xl mx-auto px-4 py-8">
