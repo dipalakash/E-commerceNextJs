@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 
-
-
 import Navbar from "@/components/Navbar";
 import { useCart } from "@/components/CartContext";
 import Image from "next/image";
@@ -32,7 +30,6 @@ export default function CartPage() {
 
   return (
     <>
-      <Navbar />
       <div className="max-w-6xl mx-auto p-6">
         <h1 className="text-3xl font-extrabold mb-8 flex items-center gap-2">
           🛍️ Your Cart
@@ -91,7 +88,7 @@ export default function CartPage() {
                 <span className="text-gray-600">Delivery:</span>
                 <span className="text-green-600 font-semibold">Free</span>
               </div>
-            
+
               <Link href="/checkout">
                 <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
                   Proceed to Checkout

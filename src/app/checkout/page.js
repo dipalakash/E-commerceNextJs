@@ -25,8 +25,6 @@ export default function CheckoutPage() {
 
   return (
     <>
-      <Navbar />
-
       <div className="max-w-2xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
         <h1 className="text-3xl font-bold mb-6">Shipping Address</h1>
 

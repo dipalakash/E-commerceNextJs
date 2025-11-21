@@ -34,7 +34,6 @@ export default function PaymentPage() {
 
   return (
     <>
-      <Navbar />
       <div className="max-w-3xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
         <h1 className="text-3xl font-bold mb-6">Payment</h1>
 
