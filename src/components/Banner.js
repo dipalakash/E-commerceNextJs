@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Banner() {
   return (
-    <div className="relative w-full h-[350px] md:h-[480px] lg:h-[520px] overflow-hidden shadow-lg">
+    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.1, opacity: 0 }}
@@ -14,20 +16,21 @@ export default function Banner() {
         className="absolute inset-0"
       >
         <Image
-          src="/images/banner.jpg" // <-- change image here
+          src="/images/banner.jpg"
           alt="Shop Banner"
           fill
-          className="object-cover brightness-[0.75]"
+          className="object-cover brightness-[0.6]"
+          priority
         />
       </motion.div>
 
       {/* Text Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 container mx-auto">
         <motion.h1
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="text-3xl md:text-5xl font-extrabold drop-shadow-lg"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow-lg"
         >
           Big Season Sale 🎉
         </motion.h1>
@@ -36,21 +39,24 @@ export default function Banner() {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-3 text-lg md:text-xl opacity-90"
+          className="mt-6 text-lg md:text-2xl opacity-90 max-w-2xl font-light"
         >
-          Up to <span className="font-bold text-yellow-300">50% OFF</span> on
-          all products!
+          Up to <span className="font-bold text-yellow-400">50% OFF</span> on
+          all premium products. Upgrade your lifestyle today.
         </motion.p>
 
-        <motion.a
-          href="/products"
+        <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mt-6 bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-xl hover:bg-purple-700 hover:text-white transition"
+          className="mt-8"
         >
-          Shop Now
-        </motion.a>
+          <Link href="/products">
+            <Button size="lg" className="text-lg px-8 py-6 rounded-full shadow-xl hover:scale-105 transition-transform">
+              Shop Now
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </div>
   );
